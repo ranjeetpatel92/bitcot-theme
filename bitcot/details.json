@@ -1,0 +1,55 @@
+{
+    "uid": "bitcot",
+    "name": "Bitcot Theme",
+    "description": "A Fresh site designed for Bitcot",
+    "version": "0.1.0",
+    "author": {
+        "name": "Bitcot technologies",
+        "email": "shubham@bitcot.com",
+        "website": "http://bitcot.com",
+        "contributors": [
+            {
+                "name": "Shubham Jain",
+                "email": ""
+            }
+        ]
+    },
+    "settings": [
+        {
+            "name": "show_side_navigation",
+            "value": true
+        },
+        {
+            "name": "home_page_keywords",
+            "value": "Web Developmenmt, ROR Development, iOS Development, Android Development, Angular/Node Framework"
+        },
+        {
+            "name": "home_page_description",
+            "value": "We are a San Diego based software development studio and a creative accelerator for web & mobile platforms."
+        }
+    ],
+    "permissions": {
+        "ACCESS_USER": [],
+        "ACCESS_WRITER": [],
+        "ACCESS_EDITOR": [],
+        "ACCESS_MANAGING_EDITOR": []
+    },
+    "main_module": {
+        "path": "bitcot.js"
+    },
+    "theme": {
+        "settings": [],
+        "content_templates":
+        [
+            {
+                "file": "blog",
+                "name": "Blog"
+            },
+
+            {
+                "file": "work",
+                "name": "work"
+            }
+        ]
+    }
+}
