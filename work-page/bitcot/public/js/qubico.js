@@ -241,48 +241,36 @@ $(document).ready(function() {
 	
 	$('.project-thumb .main-link, .project-thumb .link').click(function(e) {
 		e.preventDefault();
+		var frame_box_value = $(this).attr("name");
+		var android_frame= $(this).attr("android");
+		var ios_frame = $(this).attr("ios");
+		var ios_iPad_frame = $(this).attr("iPad");
+		var web_frame = $(this).attr("web");
 
-		var frame_box_value;
-		frame_box_value = $(this).attr("name");
-		var android_frame;
-		android_frame = $(this).attr("android");
-		var ios_frame;
-		ios_frame = $(this).attr("ios");
-		var ios_iPad_frame;
-		ios_iPad_frame = $(this).attr("iPad");
-		var web_frame;
-		web_frame = $(this).attr("web");
-
-		var android = "android";
-		var ios = "ios";
-		var iPad = "ios ipad";
-		var web = "web";
-		var ror_web= "ror web";
-
-		if (android === frame_box_value ) {
+		if ("android" === frame_box_value ) {
+			$('.imac-frame .frame_box').attr( 'src', android_frame);
 			$('.imac-screen').addClass('android_frame');
 			$('.imac-screen').removeClass('ios_frame iPad_frame');
-			$('.imac-frame .frame_box').attr( 'src', android_frame);
 	    }
-		else if(ios === frame_box_value){
+		else if("ios" === frame_box_value){
+			$('.imac-frame .frame_box').attr('src', ios_frame);
 			$('.imac-screen').addClass('ios_frame');
 			$('.imac-screen').removeClass('android_frame iPad_frame');
-			$('.imac-frame .frame_box').attr('src', ios_frame);
 		}
-		else if(iPad === frame_box_value){
+		else if("ios ipad" === frame_box_value){
+			$('.imac-frame .frame_box').attr('src', ios_iPad_frame);
 			$('.imac-screen').addClass('iPad_frame');
 			$('.imac-screen').removeClass('android_frame ios_frame');
-			$('.imac-frame .frame_box').attr('src', ios_iPad_frame);
 		}
-		else if(web === frame_box_value){
+		else if("web" === frame_box_value){
+			$('.imac-frame .frame_box').attr('src', web_frame);
 			$('.imac-screen').removeClass('android_frame');
 			$('.imac-screen').removeClass('ios_frame iPad_frame');
-			$('.imac-frame .frame_box').attr('src', web_frame);
 		}
-		else if(ror_web === frame_box_value){
+		else if("ror web" === frame_box_value){
+			$('.imac-frame .frame_box').attr('src', web_frame);
 			$('.imac-screen').removeClass('android_frame');
 			$('.imac-screen').removeClass('ios_frame iPad_frame');
-			$('.imac-frame .frame_box').attr('src', web_frame);
 		}
 
 		var elem =$(this).parents('.project-item');

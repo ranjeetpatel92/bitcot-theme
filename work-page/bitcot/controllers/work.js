@@ -99,12 +99,12 @@ work.prototype.renderContent = function(result, cb) {
     var ats = new pb.TemplateService(this.ls);
     ats.reprocess = false;
     ats.registerLocal('work_name', result.name);
-    ats.registerLocal('work_title', result.title);
+    ats.registerLocal('work_title', result.title);    
     ats.registerLocal('work_url', result.url);
     ats.registerLocal('work_projectType', result.projectType);
     ats.registerLocal('work_projectThumb', result.projectThumb);
     ats.registerLocal('work_project_images', result.project_images);
-    ats.registerLocal('work_description', result.description);
+	ats.registerLocal('work_description', result.description);
 
     ats.load('elements/work', cb);
 };
